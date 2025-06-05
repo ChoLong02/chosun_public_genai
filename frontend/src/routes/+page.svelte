@@ -21,7 +21,7 @@
         } 
         try {
             // 1. 이미지 생성 요청
-            const res = await fetch("http://localhost:8000/api/image", {
+            const res = await fetch("/api/image", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({prompt: promptMessage}),
