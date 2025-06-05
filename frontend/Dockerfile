@@ -14,11 +14,11 @@ RUN npm install
 COPY ./frontend /app/frontend
 
 # [개발 모드]로 실행할 경우 (개발 서버)
-CMD ["npm", "run", "dev", "--", "--host"]
+# CMD ["npm", "run", "dev", "--", "--host"]
 
 
 # [배포용]
-# RUN npm run build
-# CMD ["node", "build"]
+RUN npm run build
+CMD ["node", "build"]
 
 EXPOSE 5000
